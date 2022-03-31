@@ -12,7 +12,7 @@ const InfoBox = ({ title, cases, total, isRed }) => {
       <CardContent>
         <h2 className="font-bold">{title}</h2>
         <h2 className={`infoBox__cases ${!isRed && "infoBox__cases--green"}`}>
-          +{millify(cases, { lowercase: true })}
+          +{millify(cases || 0, { lowercase: true })}
         </h2>
         <p className="infoBox__total">
           {millify(total || 0, { lowercase: true })} Total
